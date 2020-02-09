@@ -12,6 +12,11 @@ public class PlayerScript : MonoBehaviour
     public GameObject Player;
     bool Left;
     bool right;
+    bool Up;
+    bool Down;
+    public bool Ladder;
+
+   
     void Start()
     {
         
@@ -28,8 +33,16 @@ public class PlayerScript : MonoBehaviour
         {
             Player.transform.Translate(Vector2.right * MovementSpeed * Time.deltaTime);
         }
-    }
+        if (Up == true && Ladder == true)
+        {
+            Player.transform.Translate(Vector2.up * MovementSpeed * Time.deltaTime);
+        }
+        if (false == true && Ladder == true)
+        {
+            Player.transform.Translate(Vector2.down * MovementSpeed * Time.deltaTime);
+        }
 
+    }
     public void MoveRight()
     {
         right = true; 
@@ -48,5 +61,25 @@ public class PlayerScript : MonoBehaviour
     public void StopLeft()
     {
         Left = false;
+    }
+
+    public void MoveUp()
+    {
+        Up = true;
+    }
+
+    public void StopUp()
+    {
+        Up = false;
+    }
+
+    public void MoveDown()
+    {
+        Down = true;
+    }
+
+    public void StopDown()
+    {
+        Down = false;
     }
 }

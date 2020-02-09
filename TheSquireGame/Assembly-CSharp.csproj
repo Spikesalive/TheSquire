@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3ADAE6CB-D38B-CC4C-762D-2C4EA134A3AE}</ProjectGuid>
+    <ProjectGuid>{21DDFF61-2516-952E-2416-1656563305A5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,39 +63,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ButtonScript.cs" />
+    <Compile Include="Assets\PlayerModelScript.cs" />
     <Compile Include="Assets\PlayerScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>E:/unityprojects/TheSquireTestgame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>E:/TheSquire/TheSquire/TheSquireGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>E:/unityprojects/TheSquireTestgame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>E:/TheSquire/TheSquire/TheSquireGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>E:/unityprojects/TheSquireTestgame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>E:/TheSquire/TheSquire/TheSquireGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>E:/unityprojects/TheSquireTestgame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>E:/TheSquire/TheSquire/TheSquireGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>E:/unityprojects/TheSquireTestgame/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>E:/TheSquire/TheSquire/TheSquireGame/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>E:/unityprojects/TheSquireTestgame/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>E:/TheSquire/TheSquire/TheSquireGame/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>E:/unityprojects/TheSquireTestgame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>E:/TheSquire/TheSquire/TheSquireGame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>E:/unityprojects/TheSquireTestgame/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>E:/TheSquire/TheSquire/TheSquireGame/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>E:/unityprojects/TheSquireTestgame/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>E:/TheSquire/TheSquire/TheSquireGame/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>E:/unityprojects/TheSquireTestgame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>E:/TheSquire/TheSquire/TheSquireGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>E:/unityprojects/TheSquireTestgame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>E:/TheSquire/TheSquire/TheSquireGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -12,8 +12,8 @@ public class PlayerScript : MonoBehaviour
     public GameObject Player;
     bool Left;
     bool right;
-    bool Up;
-    bool Down;
+    public bool Up;
+    public bool Down;
     public bool Ladder;
 
    
@@ -37,9 +37,19 @@ public class PlayerScript : MonoBehaviour
         {
             Player.transform.Translate(Vector2.up * MovementSpeed * Time.deltaTime);
         }
-        if (false == true && Ladder == true)
+        if (Down == true && Ladder == true)
         {
             Player.transform.Translate(Vector2.down * MovementSpeed * Time.deltaTime);
+        }
+        if (Ladder == true)
+        {
+            Player.GetComponent<Rigidbody2D>().isKinematic = true;
+            Player.GetComponent<Rigidbody2D>().gravityScale = 0;
+        }
+        if (Ladder == false)
+        {
+            Player.GetComponent<Rigidbody2D>().isKinematic = false;
+            Player.GetComponent<Rigidbody2D>().gravityScale = 1;
         }
 
     }

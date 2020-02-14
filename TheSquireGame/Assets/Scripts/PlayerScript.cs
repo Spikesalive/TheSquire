@@ -48,13 +48,33 @@ public class PlayerScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("EnemyMelee"))
         {
-            if (Blocking == false)
+            //if player is facing left
+            if (Playermodel.transform.eulerAngles.y == 180)
             {
-                Debug.Log("hit");
-                PlayerHealth -= 1;
+                if(Playermodel.transform.position.x > collision.transform.position.x && Blocking == false)
+                {
+                    PlayerHealth -= 1;
+                }
+                if (Playermodel.transform.position.x < collision.transform.position.x)
+                {
+                    PlayerHealth -= 1;
+                }
+            }
+            // if player is facing right
+            else
+            {
+                if (Playermodel.transform.position.x < collision.transform.position.x && Blocking == false)
+                {
+                    PlayerHealth -= 1;
+                }
+                if (Playermodel.transform.position.x > collision.transform.position.x)
+                {
+                    PlayerHealth -= 1;
+                }
             }
         }
     }
+    // player movement
     public void MoveRight()
     {
         right = true;
@@ -78,7 +98,7 @@ public class PlayerScript : MonoBehaviour
     }
 
 
-
+    //player attack / block
     public void Attack()
     {
         if (Blocking == false)

@@ -3,8 +3,10 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - ButtonScript
     - CameraScript
+    - EnemyAI
     - MeleeScript
     - PlayerScript
+    - ProjectileScript
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -45,17 +47,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11474}
+      Script: {instanceID: 11442}
     - Class: 114
-      Script: {instanceID: 11778}
+      Script: {instanceID: 11530}
     - Class: 114
-      Script: {instanceID: 12532}
+      Script: {instanceID: 11834}
     - Class: 114
-      Script: {instanceID: 12642}
+      Script: {instanceID: 12002}
     - Class: 114
-      Script: {instanceID: 13080}
+      Script: {instanceID: 12590}
     - Class: 114
-      Script: {instanceID: 32384}
+      Script: {instanceID: 12626}
+    - Class: 114
+      Script: {instanceID: 12702}
+    - Class: 114
+      Script: {instanceID: 13140}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -153,6 +159,12 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: 91df2b53ad09194453806fa1194dc6c9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ProjectileScript
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -171,7 +183,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: df83b1ae549f84d00773f206f8b4445f
+      Hash: 9219c66d4f8fa870120398d1b0d22c7f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
@@ -259,6 +271,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: b25aef5bad163a956bd48e144eaa30d1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyAI
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -367,6 +385,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraScript
+  - hash:
+      serializedVersion: 2
+      Hash: ec3873a2de31b3b0a40df0d62a9e935d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MeleeScript
   - hash:
       serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
@@ -505,25 +529,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: b25aef5bad163a956bd48e144eaa30d1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: EnemyAI
-  - hash:
-      serializedVersion: 2
-      Hash: 91df2b53ad09194453806fa1194dc6c9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ProjectileScript
-  - hash:
-      serializedVersion: 2
-      Hash: ec3873a2de31b3b0a40df0d62a9e935d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MeleeScript
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/TheSquire/TheSquire/TheSquireGame/TheSquiretest.apk
+  playerPath: C:/Users/mbawdon/Documents/GitHub/TheSquire/TheSquireGame/TheSquiretest.apk

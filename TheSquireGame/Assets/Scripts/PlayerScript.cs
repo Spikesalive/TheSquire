@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerScript : MonoBehaviour
     public float MovementSpeed;
 
     public GameObject Player;
+    public int PlayerHealth;
     bool Left;
     bool right;
 
@@ -37,8 +39,22 @@ public class PlayerScript : MonoBehaviour
         {
             Player.transform.Translate(Vector2.right * MovementSpeed * Time.deltaTime);
         }
+        if (PlayerHealth <= 0)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("EnemyMelee"))
+        {
+            if (Blocking == false)
+            {
+                Debug.Log("hit");
+                PlayerHealth -= 1;
+            }
+        }
+    }
     public void MoveRight()
     {
         right = true;

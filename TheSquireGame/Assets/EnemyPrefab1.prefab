@@ -130,7 +130,7 @@ MonoBehaviour:
   MovementSpeed: 1
   StoppingDistance: 3
   AttackDistance: 5
-  Health: 0
+  Health: 1
   MeleeClass: 0
   ProjectileSpawn: {fileID: 7268594000319872102}
   RangedAttack: {fileID: 7815242483077974381, guid: 853826166133ce24b90ed0d6185ff981,
@@ -148,7 +148,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

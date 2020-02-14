@@ -36,7 +36,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector2.Distance(transform.position, Player.transform.position) > StoppingDistance)
+        if(Vector2.Distance(transform.position, Player.transform.position) > StoppingDistance && Vector2.Distance(transform.position, Player.transform.position) < 10)
         {
             transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, MovementSpeed * Time.deltaTime);
         }
@@ -47,6 +47,11 @@ public class EnemyAI : MonoBehaviour
             {
                 //melee
             }
+        }
+
+        if(Health <= 0)
+        {
+            Destroy(gameObject);
         }
         
 
@@ -75,6 +80,15 @@ public class EnemyAI : MonoBehaviour
         if (Vector2.Distance(transform.position, Player.transform.position) < AttackDistance)
         {
             Instantiate(MeleeAttack, ProjectileSpawn.position, ProjectileSpawn.rotation);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Melee"))
+        {
+            Debug.Log("hit");
+            Health -= 1;
         }
     }
 }

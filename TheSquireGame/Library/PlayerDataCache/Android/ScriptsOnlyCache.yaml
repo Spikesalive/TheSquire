@@ -51,29 +51,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11158}
+      Script: {instanceID: 11220}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11430}
     - Class: 114
-      Script: {instanceID: 11394}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11482}
+      Script: {instanceID: 11544}
     - Class: 114
-      Script: {instanceID: 11790}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 11954}
+      Script: {instanceID: 12016}
     - Class: 114
-      Script: {instanceID: 11960}
+      Script: {instanceID: 12022}
     - Class: 114
-      Script: {instanceID: 12556}
+      Script: {instanceID: 12618}
     - Class: 114
-      Script: {instanceID: 12592}
+      Script: {instanceID: 12654}
     - Class: 114
-      Script: {instanceID: 12670}
+      Script: {instanceID: 12732}
     - Class: 114
-      Script: {instanceID: 12726}
+      Script: {instanceID: 12788}
     - Class: 114
-      Script: {instanceID: 13112}
+      Script: {instanceID: 13174}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -592,4 +592,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/mbawdon/Documents/GitHub/TheSquire/TheSquireGame/TheSquiretest.apk
+  playerPath: E:/TheSquire/TheSquire/TheSquireGame/TheSquiretest.apk

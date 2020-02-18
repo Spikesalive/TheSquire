@@ -22,6 +22,8 @@ public class PlayerScript : MonoBehaviour
     public GameObject Shield;
     public Transform SpawnSpot;
     GameObject shieldtest;
+
+    public Joystick joystick;
    
     void Start()
     {
@@ -31,6 +33,8 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Player.transform.Translate(joystick.Horizontal* MovementSpeed *Time.deltaTime, 0, 0);
+        
         if(Left == true)
         {
             Player.transform.Translate(Vector2.left * MovementSpeed * Time.deltaTime);

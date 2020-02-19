@@ -58,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6416582284160456392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7268594000319872102}
@@ -127,6 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6797c3562a3e88e49a5709b65069ce6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Platformslayermask:
+    serializedVersion: 2
+    m_Bits: 256
   Player: {fileID: 0}
   MovementSpeed: 1
   StoppingDistance: 3
@@ -138,6 +141,8 @@ MonoBehaviour:
     type: 3}
   MeleeAttack: {fileID: 0}
   Attackspeed: 5
+  AICollider: {fileID: 8289909524305524378}
+  vector2: {x: 0, y: 0}
   relativePoint: {x: 0, y: 0}
 --- !u!61 &8289909524305524378
 BoxCollider2D:

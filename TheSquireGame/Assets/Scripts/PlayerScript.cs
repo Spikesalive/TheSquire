@@ -21,7 +21,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject Sword;
     public GameObject Shield;
     public Transform SpawnSpot;
-    GameObject shieldtest;
+    private GameObject shieldtest;
 
     public Joystick joystick;
     public Rigidbody2D PlayerRigidbody2D;
@@ -40,11 +40,9 @@ public class PlayerScript : MonoBehaviour
         //jump
         if (IsGrounded() && joystick.Vertical > .2)
         {
-            Debug.Log("jump");
             PlayerRigidbody2D.velocity = Vector2.up * JumpVelocity;
-            
         }
-        // joystick movement
+                    // joystick movement
         if(joystick.Horizontal > 0)
         {
             PlayerRigidbody2D.velocity = new Vector2(+MovementSpeed * joystick.Horizontal, PlayerRigidbody2D.velocity.y);

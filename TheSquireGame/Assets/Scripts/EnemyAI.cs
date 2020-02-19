@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+
+    [SerializeField] public LayerMask Platformslayermask;
+
     public GameObject Player;
     public float MovementSpeed;
     public float StoppingDistance;
@@ -16,9 +19,13 @@ public class EnemyAI : MonoBehaviour
     public GameObject MeleeAttack;
     public float Attackspeed;
 
+    public Collider2D AICollider;
+
     public Vector2 vector2;
 
     public Vector2 relativePoint;
+
+
 
     
     // Start is called before the first frame update
@@ -42,7 +49,10 @@ public class EnemyAI : MonoBehaviour
         vector2 = new Vector2(Player.transform.position.x ,transform.position.y);
         if(Vector2.Distance(transform.position, Player.transform.position) > StoppingDistance && Vector2.Distance(transform.position, Player.transform.position) < 10)
         {
+       
             transform.position = Vector2.MoveTowards(transform.position, vector2, MovementSpeed * Time.deltaTime);
+
+            //transform.position = Vector2.MoveTowards(transform.position, vector2, MovementSpeed * Time.deltaTime);
         }
         if(Vector2.Distance(transform.position, Player.transform.position) < AttackDistance)
         {
@@ -59,17 +69,21 @@ public class EnemyAI : MonoBehaviour
         }
         
 
+
+
         //checking whether player is left or right of Ai
         relativePoint = transform.InverseTransformPoint(Player.transform.position);
         if (relativePoint.x < 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
         {
             //Debug.Log("Right");
             transform.Rotate(0, 0, 0);
+
         }
         if (relativePoint.x > 0f && Mathf.Abs(relativePoint.x) > Mathf.Abs(relativePoint.y))
         {
             //Debug.Log("Left");
             transform.Rotate(0, 180, 0);
+
         }
     }
     void Shoot()
@@ -94,4 +108,5 @@ public class EnemyAI : MonoBehaviour
             Health -= 1;
         }
     }
+
 }

@@ -26,6 +26,7 @@ public class PlayerScript : MonoBehaviour
     public Joystick joystick;
     public Rigidbody2D PlayerRigidbody2D;
     public Collider2D PCollider;
+
     void Start()
     {
         PlayerRigidbody2D = transform.GetComponent<Rigidbody2D>();
@@ -36,14 +37,14 @@ public class PlayerScript : MonoBehaviour
     {
         //Player.transform.Translate(joystick.Horizontal* MovementSpeed *Time.deltaTime, 0, 0);
 
-
+        //jump
         if (IsGrounded() && joystick.Vertical > .2)
         {
             Debug.Log("jump");
             PlayerRigidbody2D.velocity = Vector2.up * JumpVelocity;
             
         }
-        
+        // joystick movement
         if(joystick.Horizontal > 0)
         {
             PlayerRigidbody2D.velocity = new Vector2(+MovementSpeed * joystick.Horizontal, PlayerRigidbody2D.velocity.y);
@@ -54,7 +55,7 @@ public class PlayerScript : MonoBehaviour
             PlayerRigidbody2D.velocity = new Vector2(MovementSpeed * joystick.Horizontal , PlayerRigidbody2D.velocity.y);
             Playermodel.transform.rotation = new Quaternion(0, 180, 0, 0);
         }
-
+        //player health / damage
         if (PlayerHealth <= 0)
         {
             SceneManager.LoadScene(0);
@@ -97,6 +98,7 @@ public class PlayerScript : MonoBehaviour
         //Debug.Log(raycastHit2D.collider);
         return raycastHit2D.collider != null;
     }
+
     //player attack / block
     public void Attack()
     {
@@ -105,12 +107,14 @@ public class PlayerScript : MonoBehaviour
             Instantiate(Sword, SpawnSpot.position, SpawnSpot.rotation);
         }
     }
+
     public void Block()
     {
         Blocking = true;
         shieldtest = Instantiate(Shield, SpawnSpot.position, SpawnSpot.rotation);
         shieldtest.transform.parent = gameObject.transform;
     }
+
     public void NotBlock()
     {
         Blocking = false;

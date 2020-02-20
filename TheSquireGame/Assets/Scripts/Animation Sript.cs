@@ -29,9 +29,11 @@ public class AnimationSript : MonoBehaviour
 
     Animator animator;
     //Flags to check when certain animations are playing
+    /*
     bool _isPlaying_walk = false;
     bool _isPlaying_block = false;
     bool _isPlaying_attack = false;
+    */
 
     //The values in the animator conditions
     const int STATE_IDLE = 0;

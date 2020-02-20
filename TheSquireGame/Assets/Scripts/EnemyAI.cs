@@ -25,13 +25,19 @@ public class EnemyAI : MonoBehaviour
 
     public Vector2 relativePoint;
 
+    public Animator animator;
+
+    const int STATE_IDLE = 0;
+    const int STATE_WALK = 1;
+    const int STATE_ATTACK = 2;
+
+    int _currentAnimationState = STATE_IDLE;
 
 
-    
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = this.animator.GetComponent<Animator>();
         Player = GameObject.FindWithTag("Player");
         if (MeleeClass == false)
         {
@@ -51,16 +57,13 @@ public class EnemyAI : MonoBehaviour
         {
        
             transform.position = Vector2.MoveTowards(transform.position, vector2, MovementSpeed * Time.deltaTime);
-
+            changeState(STATE_WALK);
             //transform.position = Vector2.MoveTowards(transform.position, vector2, MovementSpeed * Time.deltaTime);
         }
-        if(Vector2.Distance(transform.position, Player.transform.position) < AttackDistance)
+
+        if (Vector2.Distance(transform.position, Player.transform.position) < 10)
         {
-            //run attack animation
-            if (MeleeClass == true)
-            {
-                //melee
-            }
+            changeState(STATE_IDLE);
         }
 
         if(Health <= 0)
@@ -91,6 +94,7 @@ public class EnemyAI : MonoBehaviour
         if (Vector2.Distance(transform.position, Player.transform.position) < AttackDistance)
         {
             Instantiate(RangedAttack, ProjectileSpawn.position, ProjectileSpawn.rotation);
+            changeState(STATE_ATTACK);
         }
     }
     void Melee()
@@ -98,6 +102,7 @@ public class EnemyAI : MonoBehaviour
         if (Vector2.Distance(transform.position, Player.transform.position) < AttackDistance)
         {
             Instantiate(MeleeAttack, ProjectileSpawn.position, ProjectileSpawn.rotation);
+            changeState(STATE_ATTACK);
         }
     }
 
@@ -107,6 +112,27 @@ public class EnemyAI : MonoBehaviour
         {
             Health -= 1;
         }
+    }
+
+    void changeState(int State)
+    {
+        if (_currentAnimationState == State)
+            return;
+        switch (State)
+        {
+            case STATE_WALK:
+                animator.SetInteger("State", STATE_WALK);
+                break;
+
+            case STATE_IDLE:
+                animator.SetInteger("State", STATE_IDLE);
+                break;
+
+            case STATE_ATTACK:
+                animator.SetInteger("State", STATE_ATTACK);
+                break;
+        }
+        _currentAnimationState = STATE_IDLE;
     }
 
 }
